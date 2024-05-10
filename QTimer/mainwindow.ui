@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>100</y>
+      <width>371</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="5" column="3" rowspan="2">
+      <widget class="QPushButton" name="pauseBtn">
+       <property name="text">
+        <string>PAUSE</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" rowspan="3" colspan="3">
+      <widget class="QProgressBar" name="bar">
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2" rowspan="2">
+      <widget class="QPushButton" name="goBtn">
+       <property name="text">
+        <string>GO</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" rowspan="2">
+      <widget class="QPushButton" name="resetBtn">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>RESET</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>goBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>go()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>150</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pauseBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>pause()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>387</x>
+     <y>382</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>422</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>174</x>
+     <y>380</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>172</x>
+     <y>360</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>go()</slot>
+  <slot>pause()</slot>
+  <slot>reset()</slot>
+ </slots>
+</ui>
